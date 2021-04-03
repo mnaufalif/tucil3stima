@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin="">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"">
     
     </script>
     
@@ -18,6 +14,12 @@
 <body>
     <h1 class="">The A* Route Searcher</h1>
     <div id="mapid"></div>
+    <form action="#" class="" method="POST">
+        <p class="">Point persimpangan</p>
+        <p class=""><input type="text" name="n" id="point" value=""></p>
+        <p class=""><input type="submit" name="Submit"></p>
+    </form>
+
 </body>
 
 <style>
@@ -29,18 +31,16 @@
     
 </style>
 
-<script src="Map.css">
+<script>
 
     //Load Map
     var mymap = L.map('mapid').setView([-6.891343, 107.61044], 15);
 
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=fZphBW7uSA6YEucNnNx7',{
+        attribution : '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
         maxZoom: 18,
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'mapbox/streets-v11',
         tileSize: 512,
-        zoomOffset: -1
+        zoomOffset: -1,    
     }).addTo(mymap);
 
     //Contoh add route dengan koordinate random
@@ -58,9 +58,10 @@
 			.setLatLng(e.latlng)
 			.setContent("You clicked the map at " + e.latlng.toString())
 			.openOn(mymap);
+        document.getElementById("point").value=e.latlng.lat.toString()+" "+e.latlng.lng.toString();
 	}
     mymap.on('click', onMapClick);
-
+    
 </script>
 
 </html>
