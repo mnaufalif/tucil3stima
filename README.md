@@ -1,8 +1,8 @@
 # Tucil 3 Stima: 13519066, 13519088
 Update 4 April
 - Pindah ke jupyter
-- Load map & init node lewat load txt (kalo ada waktu, init node lewat mapclick bakal coba buat)
-- Haversine udah jalan, tinggal algo A* nya
+- Load map, init node lewat load txt, display graph beres (kalo ada waktu, init node lewat mapclick bakal coba buat)
+- Tinggal algo A* nya
 
 Requirement:
 - python3 dan jupyter3 ke atas
