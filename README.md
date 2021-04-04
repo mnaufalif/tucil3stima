@@ -1,6 +1,11 @@
 # Tucil 3 Stima: 13519066, 13519088
-Update 3 April 
-- Load daftar koordinat & adj matrix done
-- Txt daftar koordinat & adj matrix terpisah (bisa dilihat di src)
-- Ongoing : Persamaan haversine
-- Webnya pending dulu karna ada masalah data fetch nya, sementara webnya bisa dimanfaatin buat dapet koordinat lebih cepet daripada google maps
+Update 4 April
+- Pindah ke jupyter
+- Load map & init node lewat load txt (kalo ada waktu, init node lewat mapclick bakal coba buat)
+- Haversine udah jalan, tinggal algo A* nya
+
+Jupyter requirement:
+- python3 dan jupyter3 ke atas
+- install folium : pip3 install folium (di cmd) atau conda install -c conda-forge folium (di anaconda terminal)
+
+Kalo file tidak jalan saat di run, restart dan reopen jupyter
