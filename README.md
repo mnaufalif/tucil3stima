@@ -6,6 +6,6 @@ Update 4 April
 
 Requirement:
 - python v3 ke atas + anaconda dan jupyter dengan versi yang sama
-- install folium : 'pip3 install folium' (di cmd) atau 'conda install -c conda-forge folium' (di anaconda terminal)
+- install folium : `pip3 install folium` (di cmd) atau `conda install -c conda-forge folium` (di anaconda terminal)
 
 Kalo file tidak jalan saat di run, restart dan reopen jupyter
