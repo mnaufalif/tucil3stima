@@ -5,7 +5,7 @@ Update 4 April
 - Tinggal algo A* nya
 
 Requirement:
-- python3 dan jupyter3 ke atas
-- install folium : pip3 install folium (di cmd) atau conda install -c conda-forge folium (di anaconda terminal)
+- python v3 ke atas + anaconda dan jupyter dengan versi yang sama
+- install folium : 'pip3 install folium' (di cmd) atau 'conda install -c conda-forge folium' (di anaconda terminal)
 
 Kalo file tidak jalan saat di run, restart dan reopen jupyter
