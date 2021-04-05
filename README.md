@@ -4,6 +4,10 @@ Update 4 April
 - Load map, init node lewat load txt, display graph beres (kalo ada waktu, init node lewat mapclick bakal coba buat)
 - Tinggal algo A* nya
 
+Specification:
+- Input file berupa 2 buah txt : 1. Koor(namadaerah) yang berisi daftar latitude, longitude dan nama persimpangan. 2. Adj(namadaerah) berisi representasi adjacency matrix daerah
+- Main program diletakkan pada .ipnyb dengan kode pendukung lainnya pada .py
+- Main program pada .ipnyb di-run satu per satu sesuai blok In[]
 
 Requirement:
 - python v3 ke atas + anaconda dan jupyter dengan versi yang sama
