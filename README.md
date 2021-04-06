@@ -1,8 +1,4 @@
 # Tucil 3 Stima: 13519066, 13519088
-Update 4 April
-- Pindah ke jupyter
-- Load map, init node lewat load txt, display graph beres (kalo ada waktu, init node lewat mapclick bakal coba buat)
-- Tinggal algo A* nya
 
 Specification:
 - Input file berupa 2 buah txt : 1. Koor(namadaerah) yang berisi daftar latitude, longitude dan nama persimpangan. 2. Adj(namadaerah) berisi representasi adjacency matrix daerah
@@ -18,7 +14,7 @@ Requirement:
   branca : `pip3 install branca`, 
   jinja2: `pip3 install jinja2`, 
   requests: `pip3 install requests`
-
-Jika loading sangat lama saat di run, restart dan reopen jupyter
-
-Peringatan! : Kedua blok program hanya bisa dijalankan sekali run saja. Selalu clear kernel apabila hendak me-run ulang program (Menu Kernel -> Restart & Clear Output). TIDAK MEMBERSIHKAN KERNEL SETIAP SEBELUM RUN .IPYNB DAPAT MENYEBABKAN KERUSAKAN PADA RESULT PROGRAM
+  
+Peringatan! : 
+- Kode program harus dijalankan berurutan (Blok 1-Blok 2-Clear Kernel- Blok1- Blok 2-dst.)
+- Kedua blok program hanya bisa dijalankan sekali run saja. Selalu clear kernel apabila hendak me-run ulang program lebih dari sekali(Menu Kernel -> Restart & Clear Output). TIDAK MEMBERSIHKAN KERNEL SEBELUM RUN YANG BARU DAPAT MENYEBABKAN KERUSAKAN PADA RESULT PROGRAM
