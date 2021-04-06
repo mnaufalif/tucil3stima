@@ -1,0 +1,10 @@
+-6.920101 107.598348 AstanaAnyar-AsiaAfrika
+-6.926879 107.599877 AstanaAnyar-Pasirkoja-Pungkur
+-6.927180 107.603663 Otista-Pungkur
+-6.937251 107.603035 Otista-BKR
+-6.937502 107.609252 BKR-MochRamdan
+-6.932481 107.614887 MochRamdan-Pungkur-Karapitan
+-6.927684 107.608658 Pasundan-Pungkur
+-6.922350 107.617685 AsiaAfrika-Karapitan-Sunda
+-6.921721 107.611997 LengkongBesar-AsiaAfrika
+-6.920832 107.604088 AsiaAfrika-Otista-Sudirman
