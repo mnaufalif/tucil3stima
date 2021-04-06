@@ -15,6 +15,6 @@ Requirement:
   jinja2: `pip3 install jinja2`, 
   requests: `pip3 install requests`
   
-Warning! : 
+Warning!
 - Kode program harus dijalankan berurutan (Blok 1-Blok 2-Clear Kernel- Blok1- Blok 2-dst.)
 - Kedua blok program hanya bisa dijalankan sekali run saja. Selalu clear kernel apabila hendak me-run ulang program lebih dari sekali(Menu Kernel -> Restart & Clear Output). TIDAK MEMBERSIHKAN KERNEL SEBELUM RUN YANG BARU DAPAT MENYEBABKAN KERUSAKAN PADA RESULT PROGRAM
