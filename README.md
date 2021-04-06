@@ -20,3 +20,5 @@ Requirement:
   requests: `pip3 install requests`
 
 Jika loading sangat lama saat di run, restart dan reopen jupyter
+
+Peringatan! : Kedua blok program hanya bisa dijalankan sekali run saja. Selalu clear kernel apabila hendak me-run ulang program (Menu Kernel -> Restart & Clear Output). TIDAK MEMBERSIHKAN KERNEL SETIAP SEBELUM RUN .IPYNB DAPAT MENYEBABKAN KERUSAKAN PADA RESULT PROGRAM
