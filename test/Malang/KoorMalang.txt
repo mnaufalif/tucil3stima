@@ -1,0 +1,8 @@
+-7.96714 112.613597 Galunggung-Tidar
+-7.95661 112.612792 BendunganSutami-Veteran
+-7.955861 112.615523 BelokanVeteran
+-7.962167 112.625914 Bandung-Ijen
+-7.97428 112.629862 BasukiRachmat-SlametRiyadi
+-7.976448 112.629519 BasukiRachmat-Semeru
+-7.975757 112.620592 Ijen-Kawi
+-7.981675 112.63042 BasukiRachmat-ArifRahmanHakim

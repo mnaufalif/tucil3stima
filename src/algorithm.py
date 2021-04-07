@@ -26,7 +26,7 @@ def a_star():
     # helper boolean
     route_exist = True
     all_neighbour_checked = False
-    while(current_node.id != end_node.id and not all_neighbour_checked):
+    while(current_node.id != end_node.id and not (all_neighbour_checked)):
         # idx untuk mencari node tetangga
         idx = current_node.get_index()
         neighbour = adj_matrix[idx]
@@ -80,12 +80,12 @@ def a_star():
         #-- setelah for loop dilakukan, id current_node akan dicatat di expanded_nodes_id
         #-- setelah itu, elemen terdepan dari pq akan diekspan (diset menjadi current_node)
         expanded_nodes_id.append(current_node.id)
-        if no_neighbour_left:
+        if no_neighbour_left and len(pq.pq) == 0:
             all_neighbour_checked = True
         else:
             current_node = pq.get()[1]
     
-    if (current_node.id!=end_node.id and all_neighbour_checked):
+    if (current_node.id!=end_node.id and (all_neighbour_checked and len(pq.pq)==0)):
         route_exist = False
 
     print("Expanded Node:", end=" ")
