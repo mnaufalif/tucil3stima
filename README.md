@@ -17,4 +17,4 @@ Requirement:
   
 Warning!
 - Kode program harus dijalankan berurutan (Blok 1-Blok 2-Clear Output- Blok1- Blok 2-dst.)
-- Kedua blok program hanya bisa dijalankan sekali run saja. Selalu clear output apabila hendak me-run ulang program lebih dari sekali (Menu Kernel -> Restart & Clear Output). TIDAK MEMBERSIHKAN KERNEL SEBELUM RUN YANG BARU DAPAT MENYEBABKAN KERUSAKAN PADA RESULT PROGRAM
+- Selalu clear output setiap hendak me-run program (Menu Kernel -> Restart & Clear Output), termasuk run untuk pertama kali. Kedua blok program hanya bisa dijalankan sekali run saja. TIDAK MEMBERSIHKAN KERNEL SEBELUM RUN YANG BARU DAPAT MENYEBABKAN KERUSAKAN PADA RESULT PROGRAM
