@@ -93,4 +93,6 @@ class Graph:
         ViewFile = "View"+selected_area
         with open(FILE_PATH+selected_area+'/'+ViewFile+".txt", "r") as f:
             start_koor = f.read().split(' ')
+            for i in range(len(start_koor)):
+            	start_koor[i] = float(start_koor[i])
             Graph.starting_view_coordinate = start_koor
