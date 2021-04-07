@@ -87,10 +87,12 @@ class Node():
         return None
 
     def set_start_end_handler():
-        print("--=Set start-end=--")
+        print()
+        print("                --=Set start-end=--                  ")
+        print("Klik 'i' pada peta untuk mengetahui nama persimpangan")
         Node.print_all()
-        Node.set_start(int(input("start: ")))
-        Node.set_end(int(input("end: ")))
+        Node.set_start(int(input("Start: ")))
+        Node.set_end(int(input("End: ")))
 
 
     def calculate_distances():

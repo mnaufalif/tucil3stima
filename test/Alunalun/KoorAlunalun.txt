@@ -8,3 +8,5 @@
 -6.922350 107.617685 AsiaAfrika-Karapitan-Sunda
 -6.921721 107.611997 LengkongBesar-AsiaAfrika
 -6.920832 107.604088 AsiaAfrika-Otista-Sudirman
+-6.936949 107.622757 Bubat-PelajarPejuang
+-6.931912 107.618052 Bubat-Banteng-Gurame

@@ -9,8 +9,9 @@ class Graph:
     latList=[]
     lngList=[]
     nameList=[]
-
-    FILENAME = ""
+    location=""
+    filename = ""
+    starting_view_coordinate = []
 
     def __init__(self):
         pass
@@ -21,14 +22,32 @@ class Graph:
             Graph.latList+=[Lat]
             Graph.lngList+=[Lng]
     
-    def read_node():
-        KoorFile = input("Masukkan nama file koordinat (tulis tanpa .txt) : ")
-        filename = FILE_PATH+KoorFile+".txt"
-        f = open(filename, "r")
+    def read_data():
+        # MENU
+        supported_area = []
+        input_valid = False
+        selected_area = ""
+        
+        with open(FILE_PATH+"supported_area.txt", "r") as f:
+            supported_area = f.read().split('\n')
+        while not input_valid:
+            print("Pilih Daerah:")
+            for i in range(len(supported_area)):
+                print("[%d] %s"%(i+1, supported_area[i]))
+            x = int(input(" >> "))
+            if 0 < x and x <= len(supported_area):
+                input_valid = True
+            else:
+                print("Masukan tidak valid.") 
+        selected_area = str(supported_area[x-1])
+
+
+        # Baca Koor
+        Graph.location = "Koor"+selected_area
+        Graph.filename = FILE_PATH+selected_area+'/'+Graph.location+".txt"
+        f = open(Graph.filename, "r")
         file_contents = f.read().splitlines()
         f.close()
-
-        Graph.FILENAME = filename
 
         temp=[]
         for i in file_contents:
@@ -42,7 +61,7 @@ class Graph:
             elif i%3==2:
                 Graph.nameList+=[temp[i]]
 
-        path = filename
+        path = Graph.filename
         with open(path, 'r') as f:
             nodes = f.read().split('\n')
             for i in range(len(nodes)):
@@ -51,10 +70,9 @@ class Graph:
                 Node(str(node[2]), float(node[0]), float(node[1]))
 
 
-
-    def read_adj():
-        AdjFile = input("Masukkan file adjacency matrix (tulis tanpa .txt) : ")
-        filename2=FILE_PATH+AdjFile+".txt"
+        # Baca Adj
+        AdjFile = "Adj"+selected_area
+        filename2=FILE_PATH+selected_area+'/'+AdjFile+".txt"
         f = open(filename2, "r")
         file_contents2 = f.read().splitlines()
         f.close()
@@ -70,3 +88,9 @@ class Graph:
                 if(Graph.adjmatrix[i][j]=='1'):
                     Graph.adjmatrix[i][j]=distance(Graph.latList[i], Graph.lngList[i], Graph.latList[j], Graph.lngList[j])
 
+
+        # Baca starting_view_coordinate
+        ViewFile = "View"+selected_area
+        with open(FILE_PATH+selected_area+'/'+ViewFile+".txt", "r") as f:
+            start_koor = f.read().split(' ')
+            Graph.starting_view_coordinate = start_koor

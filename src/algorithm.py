@@ -22,13 +22,18 @@ def a_star():
     #-- current_node adalah node yang akan diekspan
     current_node = start_node
     #[status] start_node seakan-akan keluar pq (diekspan)
-
-    while(current_node.id != end_node.id):
+    
+    # helper boolean
+    route_exist = True
+    all_neighbour_checked = False
+    while(current_node.id != end_node.id and not all_neighbour_checked):
         # idx untuk mencari node tetangga
         idx = current_node.get_index()
         neighbour = adj_matrix[idx]
+        no_neighbour_left = True
         for i in range(len(neighbour)):
             if (neighbour[i]!='0' and (i+1) not in expanded_nodes_id): # jika tetangga dan belum pernah diekspan
+                no_neighbour_left = False
                 # TODO: simpan dulu prev_node, prev_distance, dan end_distance ke variabel lokal ds, pn, de (distance_start, previous_node, distance_end).
                 # jika checked_node belum di pq (prev_distance = INFINITY_R), update prev_distance dan prev_node, lalu tambahkan checked_node ke pq
                 # jika sudah di pq dan nilai ds < prev_distance  
@@ -75,7 +80,25 @@ def a_star():
         #-- setelah for loop dilakukan, id current_node akan dicatat di expanded_nodes_id
         #-- setelah itu, elemen terdepan dari pq akan diekspan (diset menjadi current_node)
         expanded_nodes_id.append(current_node.id)
-        current_node = pq.get()[1]
+        if no_neighbour_left:
+            all_neighbour_checked = True
+        else:
+            current_node = pq.get()[1]
+    
+    if (current_node.id!=end_node.id and all_neighbour_checked):
+        route_exist = False
+
+    print("Expanded Node:", end=" ")
+    print(expanded_nodes_id, end = "")
+    if route_exist:
+        print(" -> %d [FOUND]"%(end_node.id))
+    else:
+        print(" -> X [NOT FOUND]")
+
+    if not route_exist:
+        print("Tidak ada rute yang menghubungkan kedua titik.")
+        return []
+    
     path = []
     while(current_node.prev_node != None):
         path.insert(0, current_node)
@@ -83,6 +106,7 @@ def a_star():
     path.insert(0, current_node)
 
     jarak_total = 0
+    print()
     for i in range(len(path)):
         prev_distance = 0
         if i!=0:
@@ -90,6 +114,12 @@ def a_star():
         jarak = path[i].prev_distance - prev_distance
         print(path[i].id, '-', path[i].name, "[%f km]"%(jarak))
         jarak_total += jarak
-    print("jarak total: %f km"%(jarak_total))
-    print(expanded_nodes_id)
+    
+    print()
+    print("Jarak total: %f km"%(jarak_total))
+    print("Path:", end = " ")
+    for i in range(len(path)):
+        print("[%d] %s"%(path[i].id,path[i].name), end="")
+        if i < len(path)-1:
+            print(" -> ", end="")
     return path

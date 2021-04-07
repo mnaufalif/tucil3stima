@@ -1,0 +1,12 @@
+-6.885186 107.613788 Dipatiukur-Dago-Siliwangi
+-6.887423 107.613616 DayangSumbi-Dago
+-6.887306 107.611395 Tamansari-DayangSumbi
+-6.887886 107.608235 BelokanTamansariFoodFest
+-6.898021 107.609485 Pasupati-Tamansari
+-6.898937 107.612731 Dago-Pasupati-Dipatiukur
+-6.89473 107.617457 Dago-Dipatiukur-Hasanudin
+-6.894815 107.613037 Dago-Hasanudin
+-6.892387 107.617854 Dipatiukur-Teukuumar
+-6.891502 107.613316 Dago-Teukuumar
+-6.887743 107.603939 Cihampelas-Lamping
+-6.89162 107.604239 Cihampelas-BapaHusen

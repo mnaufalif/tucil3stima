@@ -11,7 +11,7 @@ def read_data():
 
 read_data()
 final_path = a_star()
-
+global filename
 
 
 # Drawing Base
